@@ -25,13 +25,17 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public Student[] getStudents() {
-		// Add your implementation here
-		return null;
+		
+		return students;
 	}
 
 	@Override
 	public void setStudents(Student[] students) {
-		// Add your implementation here
+		if(students.length==0)
+	   throw IllegalArgumentException;
+	else
+	   this.students=students;
+
 	}
 
 	@Override

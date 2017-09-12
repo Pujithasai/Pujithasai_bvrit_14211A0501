@@ -12,9 +12,7 @@ public interface StudentArrayOperation {
 	 * @return the array of students
 	 * 
 	 */
-	Student[] getStudents( ){
-	return students;
-	}
+	Student[] getStudents( );
 	
 	
 
@@ -26,12 +24,7 @@ public interface StudentArrayOperation {
 	 * 
 	 * @throws IllegalArgumentException
 	 */
-	void setStudents(Student[] students){
-	if(students.length()==0)
-	    throw IllegalArgumentException;
-	else
-	    this.students=students;
-	}
+	void setStudents(Student[] students);
 	
 
 	/**
@@ -40,12 +33,7 @@ public interface StudentArrayOperation {
 	 *
 	 * @param index
 	 */
-	Student getStudent(int index){
-	if(index<0||index>=students.length())
-	      throw IllegalArgumentException;
-	else
-	return student[index];
-	}
+	Student getStudent(int index);
 
 	
 	/**
