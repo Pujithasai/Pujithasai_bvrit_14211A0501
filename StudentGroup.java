@@ -26,26 +26,29 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public Student[] getStudents() {
-		
+		if(students.length!=0)
 		return students;
+else
+return null;
 	}
 
 	@Override
 	public void setStudents(Student[] students) {
-		if(students.length==0)
+		try{
+if(students.length==0)
 	   throw IllegalArgumentException;
+
 	else
 	   this.students=students;
+}
+catch(IllegalArgumentException e){
+System.out.println(e.getMessage());}
 
 	}
 
 	@Override
 	public Student getStudent(int index) {
 		
-		if(index<0||index>=students.length)
-	     throw IllegalArgumentException;
-		else
-	           return students[index];
 	}
 
 	@Override
@@ -68,7 +71,8 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public void addLast(Student student) {
-		// Add your implementation here
+		int i=students.length;
+		students[i+1]=student;
 	}
 
 	@Override
