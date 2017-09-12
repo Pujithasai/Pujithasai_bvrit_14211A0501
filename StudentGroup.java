@@ -1,4 +1,5 @@
 import java.util.Date;
+import java.lang.*;
 
 /**
  * A fix-sized array of students
@@ -40,13 +41,21 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public Student getStudent(int index) {
-		// Add your implementation here
-		return null;
+		
+		if(index<0||index>=students.length)
+	     throw IllegalArgumentException;
+		else
+	           return students[i];
 	}
 
 	@Override
 	public void setStudent(Student student, int index) {
-		// Add your implementation here
+	        if(students.length==0)
+	       throw IllegalArgumentException;
+	       else if(index<0||index>=students.length)
+	        throw IllegalArgumentException;
+		else
+		students[index]=student;
 	}
 
 	@Override
