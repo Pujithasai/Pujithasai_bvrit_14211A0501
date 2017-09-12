@@ -44,7 +44,7 @@ public interface StudentArrayOperation {
 	if(index<0||index>=students.length())
 	      throw IllegalArgumentException;
 	else
-	return student[index];
+	return students[index];
 	}
 
 	
